@@ -1,0 +1,16 @@
+import express from "express";
+import { router } from "./routes/v1";
+import cors from 'cors';
+
+// @ts-ignore
+import client from "@repo/db/client"
+const app = express();
+app.use(cors());
+
+app.use(express.json());
+
+app.use('/api/v1', router);
+
+app.listen(process.env.PORT || 3000, () => {
+    console.log("http server running on PORT " + (process.env.PORT || 3000))
+});

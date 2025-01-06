@@ -9,7 +9,7 @@ const fetchData = async () => {
         type: "admin"
     });
 
-    console.log(response.data);
+    // console.log(response.data);
 };
 fetchData();
 
